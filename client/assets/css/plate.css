@@ -1,0 +1,88 @@
+/* 板块 */
+.plate{
+	display: block;
+	min-width: 230px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.plate .header{
+	font-size: 14px;
+	color: #333;
+	background : #F8F8F8;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
+.plate .content{
+	padding: 10px;
+}
+
+
+.plates-group,
+.plates-group.column,
+.plates-group.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.plates-group:before,
+.plates-group:after{
+	display: table;
+	content: ' ';
+	clear: both;
+}
+
+.plates-group.column .plate,
+.plates-group.aside .plate{
+	float: left;
+}
+
+.plates-group.column.pane{
+    border: 1px solid #eee;
+}
+.plates-group.column.pane .plate{
+    border: 0;
+    padding: 20px 0;
+    background: #FAFAFA;
+}
+.plates-group.column.pane .plate .content{
+    border-right: 1px solid #eee;
+    padding: 5px;
+    text-align: center;
+}
+.plates-group.column.pane .plate:last-child .content{
+    border-right: 0;
+}
+.plates-group.column.pane .content.statistic{
+    display: block;
+}
+.plates-group.column.pane .content.statistic,
+.plates-group.column.pane .content .statistic{
+    margin: 0;
+}
+
+.plates-group.vertical .plate{
+    margin-top: 10px;
+}
+
+.plates-group.aside .plate:first-child{
+	float: left;
+	width: 230px;
+	max-width: 230px;
+}
+.plates-group.aside .plate:last-child{
+	float: none;
+	width: 100%;
+	margin-left: 240px;
+}
+.plates-group.aside .plate:last-child .header{
+	text-align: left;
+}
+.plates-group.fixed .plate:first-child{
+	position: fixed;
+    height: 100%;
+}
+
+.col-20{
+    width: 20%;
+}
